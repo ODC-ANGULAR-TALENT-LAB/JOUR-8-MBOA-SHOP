@@ -1,0 +1,22 @@
+<!-- src/app/catalogue/catalogue.html -->
+<h2>Catalogue MboaShop</h2>
+
+@if (catalogue.isLoading()) {
+  <p class="etat">Chargement du catalogue…</p>
+} @else if (catalogue.error()) {
+  <p class="erreur">Erreur : impossible de joindre le serveur.</p>
+} @else {
+  @if (catalogue.value()?.length) {
+    <ul>
+      @for (p of catalogue.value(); track p.id) {
+        <li>
+          <span class="nom">{{ p.nom }}</span>
+          <span class="prix">{{ p.prix | number: '1.0-0' }} FCFA</span>
+          <span class="categorie">{{ p.categorie }}</span>
+        </li>
+      }
+    </ul>
+  } @else {
+    <p class="etat">Aucun produit disponible.</p>
+  }
+}

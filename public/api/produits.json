@@ -1,0 +1,5 @@
+[
+  { "id": "p1", "nom": "Sac de riz 5 kg", "prix": 3500, "categorie": "Epicerie" },
+  { "id": "p2", "nom": "Bidon d'huile 5 L", "prix": 6000, "categorie": "Epicerie" },
+  { "id": "p3", "nom": "Regime de plantain", "prix": 2000, "categorie": "Marche" }
+]

@@ -1,0 +1,70 @@
+:host {
+  display: block;
+}
+
+h2 {
+  font-size: 1.35rem;
+  margin: 0 0 1rem;
+  color: var(--texte, #1f2933);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.9rem;
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1rem 1.1rem;
+  background: var(--fond-carte, #fff);
+  border: 1px solid var(--bordure, #e4e7eb);
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(31, 41, 51, 0.05);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    border-color 0.15s ease;
+}
+
+li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(31, 41, 51, 0.1);
+  border-color: var(--orange, #ff6f00);
+}
+
+.nom {
+  font-weight: 600;
+  font-size: 1.02rem;
+}
+
+.prix {
+  font-weight: 700;
+  color: var(--orange-fonce, #e65100);
+  font-size: 1.1rem;
+}
+
+.categorie {
+  align-self: flex-start;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--vert, #1b8a3a);
+  background: rgba(27, 138, 58, 0.1);
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+}
+
+.etat {
+  color: var(--texte-doux, #52606d);
+}
+
+.erreur {
+  color: #cf1124;
+  font-weight: 600;
+}
